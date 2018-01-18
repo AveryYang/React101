@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":["ReactDOM","render","React","createElement","document","getElementById"],"mappings":";;AAAAA,SAASC,MAAT,CACAC,MAAMC,aAAN,CAAoB,IAApB,EAA0B,IAA1B,EAAgC,QAAhC,CADA,EAEAC,SAASC,cAAT,CAAwB,SAAxB,CAFA","file":"app.js","sourcesContent":["ReactDOM.render(\nReact.createElement(\"h1\", null, \"Hello!\"),\ndocument.getElementById('example')\n);"]}
