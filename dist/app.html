@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="https://fb.me/react-0.14.7.js"></script>
+    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <!-- script裡編寫的是JSX語法，而babel是JSX的Compiler 當我們載入網頁時會負責把JSX轉換成.js-->
+    <script type="text/babel">
+    //  document是瀏覽器DOM所提供的標準物件，裡面有一個getElementById 的 function，
+    // 這函數的目地是找到一個名為"example"的區塊(div)，並且將ReactDOM.render的第一個參數放置在區塊裡。
+        ReactDOM.render(
+            <h1>Hello, world!</h1>,
+            document.getElementById('example')
+        );
+        </script>
+</body>
+
+</html>
