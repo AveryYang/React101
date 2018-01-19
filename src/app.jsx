@@ -1,3 +1,5 @@
+import React from 'react';
+import { render } from 'react-dom';
 var Title = React.createClass({
     render: function () {
         return (
@@ -9,7 +11,7 @@ var Title = React.createClass({
         )
     }
 });
-ReactDOM.render(
+render(
     // 物件名稱必需是大寫
     <Title text="Thinking in React" />,
     document.getElementById('example')
