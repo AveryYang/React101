@@ -25,6 +25,7 @@ var browserSync = require("browser-sync");
 var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var react = require('gulp-react');
+var browserify = require('gulp-browserify')
 
 // Convert JSX and compile ES2015 to JavaScript
 gulp.task('build', function () {
@@ -37,12 +38,19 @@ gulp.task('build', function () {
         presets: ['es2015']
       }))
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('src'));
+});
+
+// browserify
+gulp.task('browserify', function () {
+    return gulp.src('src/app.js')
+    .pipe(browserify())
+    .pipe(gulp.dest('dist'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function () {
-    gulp.watch(['src/*'], ['build']);
+    gulp.watch(['src/**/*.jsx'], ['build', 'browserify']);
 });
 
 // Default Task
